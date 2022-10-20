@@ -1,14 +1,15 @@
 # Задайте список из нескольких чисел. Напишите программу, которая найдёт сумму элементов списка, стоящих на нечётной позиции.
 
-List = [2,3,5,9,3]
-
+import random
+List=[ random.randint(-100,100) for _ in range(10)]
 print(List)
-list_length=len(List)
+
 sum = 0
 elements = 'На нечётных позициях элементы '
 num = str(' ')
+list_length=len(List)
 for i in range(list_length):
-    if i%2 != 0 and (List[-1] or List[-2]):
+    if i%2 != 0 and i> list_length - 2:
         sum = sum + List[i]
         num = str(List[i])
         elements = elements + num + '. '
